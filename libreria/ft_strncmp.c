@@ -6,9 +6,10 @@
 /*   By: acoayo-f <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/25 19:14:41 by acoayo-f          #+#    #+#             */
-/*   Updated: 2024/03/13 16:58:16 by acoayo-f         ###   ########.fr       */
+/*   Updated: 2024/03/18 16:25:38 by acoayo-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
 int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {

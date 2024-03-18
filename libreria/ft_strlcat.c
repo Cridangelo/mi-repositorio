@@ -6,9 +6,10 @@
 /*   By: acoayo-f <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 21:27:42 by acoayo-f          #+#    #+#             */
-/*   Updated: 2024/03/13 16:53:44 by acoayo-f         ###   ########.fr       */
+/*   Updated: 2024/03/18 16:24:59 by acoayo-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
 size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
@@ -17,7 +18,7 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 
 	i = 0;
 	j = 0;
-	while (dest[i] != '\0')
+	while (dest[i] != '\0' && i < size)
 	{
 		i++;
 	}

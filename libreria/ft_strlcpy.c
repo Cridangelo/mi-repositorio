@@ -6,9 +6,10 @@
 /*   By: acoayo-f <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 20:32:13 by acoayo-f          #+#    #+#             */
-/*   Updated: 2024/03/12 21:26:55 by acoayo-f         ###   ########.fr       */
+/*   Updated: 2024/03/18 16:25:16 by acoayo-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {

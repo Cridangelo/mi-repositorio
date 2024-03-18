@@ -6,9 +6,10 @@
 /*   By: acoayo-f <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 18:07:19 by acoayo-f          #+#    #+#             */
-/*   Updated: 2024/03/15 17:03:08 by acoayo-f         ###   ########.fr       */
+/*   Updated: 2024/03/18 16:20:47 by acoayo-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
 void	ft_bzero(void *ptr, size_t num)
 {

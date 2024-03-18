@@ -6,9 +6,10 @@
 /*   By: acoayo-f <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 18:40:46 by acoayo-f          #+#    #+#             */
-/*   Updated: 2024/03/12 18:56:02 by acoayo-f         ###   ########.fr       */
+/*   Updated: 2024/03/18 16:23:11 by acoayo-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
 void	*mempcy(void *dest, const void *src, size_t n)
 {

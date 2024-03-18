@@ -6,9 +6,10 @@
 /*   By: acoayo-f <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 16:37:22 by acoayo-f          #+#    #+#             */
-/*   Updated: 2024/03/13 16:55:35 by acoayo-f         ###   ########.fr       */
+/*   Updated: 2024/03/18 16:26:12 by acoayo-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
 char	*ft_strrchr(const char *str, int c)
 {
