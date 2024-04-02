@@ -1,20 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acoayo-f <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/13 19:25:45 by acoayo-f          #+#    #+#             */
-/*   Updated: 2024/04/02 21:07:27 by acoayo-f         ###   ########.fr       */
+/*   Created: 2024/04/02 21:04:48 by acoayo-f          #+#    #+#             */
+/*   Updated: 2024/04/02 21:30:48 by acoayo-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+char	*ft_itoa(int n)
 {
-	int	result;
-	int	sign;
+	int		result;
+	int		sign;
+	int		response;
+	char	*str;
 
 	result = 0;
 	sign = 1;
@@ -32,5 +35,7 @@ int	ft_atoi(const char *str)
 		result = result * 10 + (*str - '0');
 		str++;
 	}
-	return (result * sign);
+	response = (result * sign);
+	str = malloc(response * sizeof(char));
+	return (str);
 }
