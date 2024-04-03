@@ -6,18 +6,21 @@
 /*   By: acoayo-f <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 18:07:19 by acoayo-f          #+#    #+#             */
-/*   Updated: 2024/03/18 16:20:47 by acoayo-f         ###   ########.fr       */
+/*   Updated: 2024/04/03 20:39:28 by acoayo-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-void	ft_bzero(void *ptr, size_t num)
+void	ft_bzero(void *ptr, size_t n)
 {
 	unsigned char	*p;
+	unsigned int	i;
 
-	*p = ptr;
-	while (num--)
+	p = ptr;
+	i = 0;
+	while (i < n)
 	{
-		*p++ = 0;
+		p[i] = 0;
+		i++;
 	}
 }
