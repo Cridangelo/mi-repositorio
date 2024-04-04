@@ -6,7 +6,7 @@
 /*   By: acoayo-f <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 17:46:58 by acoayo-f          #+#    #+#             */
-/*   Updated: 2024/03/18 16:26:00 by acoayo-f         ###   ########.fr       */
+/*   Updated: 2024/04/04 18:52:55 by acoayo-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -19,7 +19,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	i = 0;
 	j = 0;
 	if (*needle == '\0')
-		return ((char *)haysctack);
+		return ((char *)haystack);
 	while (i < len && haystack[i])
 	{
 		j = 0;

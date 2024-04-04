@@ -3,34 +3,34 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acoayo-f <acoayo-f@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: acoayo-f <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/01 17:03:49 by acoayo-f          #+#    #+#             */
-/*   Updated: 2024/04/01 23:00:36 by acoayo-f         ###   ########.fr       */
+/*   Created: 2024/04/04 19:26:13 by acoayo-f          #+#    #+#             */
+/*   Updated: 2024/04/04 20:11:01 by acoayo-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "stdlib.h"
+#include "libft.h"
 
-char	*ft_strtrim(char const *s1, char const *set)
+char *ft_strtrim(char const *s1, char const *set)
 {
 	char	*str;
-	size_t	a;
-	size_t	z;
+	size_t	start;
+	size_t	end;
+	size_t	len;
 
-	if (s1 != '\0' && set != '\0')
-	{
-		a = 0;
-		z = ft_strlen(s1);
-		while (s1[a] && ft_strchr(set, s1[a]))
-			a++;
-		while (s1[z - 1] && ft_strchr(set, s1[z - 1]) && z > a)
-			z--;
-		str = malloc(sizeof(char) * (z - a + 1));
-		if (!str)
-			return (0);
-		if (str)
-			ft_strlcpy(str, &s1[a], z - a + 1);
-	}
+	if (!s1 || !set)
+		return (0);
+	start = 0;
+	while (s1[start] && ft_strchr(set, s1[start]))
+		start++;
+	end = ft_strlen(s1);
+	while (end > start && ft_strchr(set, s1[end - 1]))
+		end--;
+	len = end - start;
+	str = malloc((len + 1) * sizeof(char));
+	if (!str)
+		return (0);
+	ft_strlcpy(str, s1 + start, len + 1);
 	return (str);
 }

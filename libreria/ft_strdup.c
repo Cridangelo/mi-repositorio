@@ -6,15 +6,15 @@
 /*   By: acoayo-f <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/14 18:43:13 by acoayo-f          #+#    #+#             */
-/*   Updated: 2024/03/18 15:34:04 by acoayo-f         ###   ########.fr       */
+/*   Updated: 2024/04/04 18:54:51 by acoayo-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdlib.h>
 
 char	*ft_strdup(const char *str)
 {
-	size_t		i;
-	const char	*array;
+	size_t	i;
+	char	*array;
 
 	i = 0;
 	while (str[i] != '\0')

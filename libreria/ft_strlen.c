@@ -6,17 +6,17 @@
 /*   By: acoayo-f <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 17:53:17 by acoayo-f          #+#    #+#             */
-/*   Updated: 2024/03/18 16:25:28 by acoayo-f         ###   ########.fr       */
+/*   Updated: 2024/04/04 19:04:15 by acoayo-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-int	ft_strlen(char *str)
+size_t ft_strlen(const char *s)
 {
 	int	a;
 
 	a = 0;
-	while (str[a] != '\0')
+	while (s[a] != '\0')
 	{
 		a++;
 	}
