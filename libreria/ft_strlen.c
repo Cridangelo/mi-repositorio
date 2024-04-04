@@ -6,26 +6,19 @@
 /*   By: acoayo-f <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 17:53:17 by acoayo-f          #+#    #+#             */
-/*   Updated: 2024/04/04 19:04:15 by acoayo-f         ###   ########.fr       */
+/*   Updated: 2024/04/04 20:24:32 by acoayo-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
 size_t ft_strlen(const char *s)
 {
-	int	a;
+	size_t a;
 
 	a = 0;
 	while (s[a] != '\0')
 	{
 		a++;
 	}
-	return (a - 1);
+	return (a );
 }
-/*int main()
-{
-	int i=ft_strlen("Hola") + '0';
-	write(1, &i, 1);
-	return 0;
-}
-*/
