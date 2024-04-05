@@ -6,13 +6,13 @@
 /*   By: acoayo-f <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/04 19:26:13 by acoayo-f          #+#    #+#             */
-/*   Updated: 2024/04/04 20:11:01 by acoayo-f         ###   ########.fr       */
+/*   Updated: 2024/04/05 19:34:30 by acoayo-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*str;
 	size_t	start;

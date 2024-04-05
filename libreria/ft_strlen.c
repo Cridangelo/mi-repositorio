@@ -6,19 +6,19 @@
 /*   By: acoayo-f <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 17:53:17 by acoayo-f          #+#    #+#             */
-/*   Updated: 2024/04/04 20:24:32 by acoayo-f         ###   ########.fr       */
+/*   Updated: 2024/04/05 19:35:17 by acoayo-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-size_t ft_strlen(const char *s)
+size_t	ft_strlen(const char *s)
 {
-	size_t a;
+	size_t	a;
 
 	a = 0;
 	while (s[a] != '\0')
 	{
 		a++;
 	}
-	return (a );
+	return (a);
 }
