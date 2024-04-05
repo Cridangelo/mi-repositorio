@@ -24,11 +24,12 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	large = ft_strlen(s);
 	if (start >= large)
 		return (0);
-	if (large <= start + len)
+	if (large < start + len)
 		len = large - start;
-	str = malloc((len + 1) * sizeof(char));
+	str = ft_calloc((len + 1) * sizeof(char));
 	if (!str)
 		return (NULL);
+	i = 0;
 	while (i <= len)
 	{
 		str[i] = s[start + i];
