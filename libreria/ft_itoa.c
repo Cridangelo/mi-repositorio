@@ -12,30 +12,45 @@
 
 #include "libft.h"
 
+static size_t	ft_intlen(int n)
+{
+	size_t	len;
+
+	len = 0;
+	if (n <= 0)
+		len = 1;
+	while (n != 0)
+	{
+		n = n / 10;
+		len++;
+	}
+	return (len);
+}
+
 char	*ft_itoa(int n)
 {
-	int		result;
-	int		sign;
-	int		response;
 	char	*str;
+	size_t	i;
 
-	result = 0;
-	sign = 1;
-	while (*str == ' ' || *str == 'r' || *str == '\t')
-		str++;
-	if (*str == '+')
-		str++;
-	else if (*str == '-')
+	i = ft_intlen(n);
+	str = ft_calloc(i + 1, sizeof(char));
+	if (!str)
+		return (NULL);
+	if (n == -2147483648)
+		ft_strlcpy(str, "-2147483648", 12);
+	if (n == 0)
+		str[0] = '0';
+	if (n < 0 && n != -2147483648)
 	{
-		sign = -1;
-		str++;
+		str[0] = '-';
+		n = -n;
 	}
-	while (*str >= '0' && *str <= '9')
+	str[i] = '\0';
+	while (n != 0 && n != -2147483648)
 	{
-		result = result * 10 + (*str - '0');
-		str++;
+		i--;
+		str[i] = (n % 10) + '0';
+		n = n / 10;
 	}
-	response = (result * sign);
-	str = malloc(response * sizeof(char));
 	return (str);
 }
