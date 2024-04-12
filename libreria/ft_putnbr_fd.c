@@ -6,13 +6,13 @@
 /*   By: acoayo-f <acoayo-f@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 21:27:25 by acoayo-f          #+#    #+#             */
-/*   Updated: 2024/04/11 21:27:27 by acoayo-f         ###   ########.fr       */
+/*   Updated: 2024/04/12 18:41:44 by acoayo-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
-    write(fd, n, 1);
+	write(fd, n, 1);
 }
