@@ -6,7 +6,7 @@
 /*   By: acoayo-f <acoayo-f@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 21:19:16 by acoayo-f          #+#    #+#             */
-/*   Updated: 2024/04/12 18:38:42 by acoayo-f         ###   ########.fr       */
+/*   Updated: 2024/04/20 18:58:40 by acoayo-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	write(fd, s, ft_strlen(str));
+	write(fd, s, ft_strlen(s));
 }

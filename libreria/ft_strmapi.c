@@ -6,7 +6,7 @@
 /*   By: acoayo-f <acoayo-f@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 21:02:46 by acoayo-f          #+#    #+#             */
-/*   Updated: 2024/04/12 18:36:52 by acoayo-f         ###   ########.fr       */
+/*   Updated: 2024/04/20 19:01:31 by acoayo-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
 	i = 0;
 	j = ft_strlen(s);
-	str = malloc(j + 1, sizeof(char));
+	str = malloc(j + 1 * sizeof(char));
 	if (!str)
 		return (NULL);
 	while (j > i)

@@ -6,7 +6,7 @@
 /*   By: acoayo-f <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/02 19:12:16 by acoayo-f          #+#    #+#             */
-/*   Updated: 2024/04/04 20:14:20 by acoayo-f         ###   ########.fr       */
+/*   Updated: 2024/04/20 16:56:56 by acoayo-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (0);
 	if (large < start + len)
 		len = large - start;
-	str = ft_calloc((len + 1) * sizeof(char));
+	str = ft_calloc(len + 1, sizeof(char));
 	if (!str)
 		return (NULL);
 	i = 0;
