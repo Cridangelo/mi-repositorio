@@ -6,7 +6,7 @@
 /*   By: acoayo-f <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 16:18:57 by acoayo-f          #+#    #+#             */
-/*   Updated: 2024/04/12 19:00:48 by acoayo-f         ###   ########.fr       */
+/*   Updated: 2024/04/27 17:21:28 by acoayo-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char	*ft_strdup(const char *str);
 char	*ft_strchr(const char *str, int c);
 void	*ft_memset(void *ptr, int value, size_t num);
 void	*ft_memmove(void *dst, const void *src, size_t len);
-void	*mempcy(void *dest, const void *src, size_t n);
+void	*ft_memcpy(void *dest, const void *src, size_t n);
 int		ft_memcmp(const void *ptr1, const void *ptr2, size_t num);
 void	*ft_memchr(const void *ptr, int value, size_t num);
 int		ft_isprint(int c);

@@ -6,14 +6,14 @@
 /*   By: acoayo-f <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 18:40:46 by acoayo-f          #+#    #+#             */
-/*   Updated: 2024/04/03 21:09:44 by acoayo-f         ###   ########.fr       */
+/*   Updated: 2024/04/27 17:47:19 by acoayo-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-void	*ft_mempcy(void *dest, const void *src, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	unsigned int	*ptr;
+	unsigned char	*ptr;
 	unsigned int	i;
 
 	i = 0;
@@ -22,7 +22,7 @@ void	*ft_mempcy(void *dest, const void *src, size_t n)
 		return (0);
 	while (i < n)
 	{
-		ptr[i] = ((unsigned char *)src)[i];
+		ptr[i] = ((unsigned const char *)src)[i];
 		i++;
 	}
 	return (dest);

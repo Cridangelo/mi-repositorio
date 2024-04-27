@@ -6,7 +6,7 @@
 /*   By: acoayo-f <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 21:27:42 by acoayo-f          #+#    #+#             */
-/*   Updated: 2024/04/20 20:20:28 by acoayo-f         ###   ########.fr       */
+/*   Updated: 2024/04/27 15:40:29 by acoayo-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -36,6 +36,6 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 		j++;
 		i++;
 	}
-		dest[i] = '\0';
-	return (len);	
+	dest[i] = '\0';
+	return (len);
 }
