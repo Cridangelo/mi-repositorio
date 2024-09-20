@@ -42,7 +42,7 @@ int	ft_printf(const char *string, ...)
 
 	i = 0;
 	length = 0;
-	va_start(args, string);
+	va_start(args, string); 
 	while (string[i] != '\0')
 	{
 		if (string[i] == '%')

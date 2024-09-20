@@ -20,13 +20,14 @@ void	ft_pointer(size_t pointer, int *length)
 
 	base_character = "0123456789abcdef";
 	i = 0;
-	write(1, "0x", 2);
-	(*length) += 2;
 	if (pointer == 0)
 	{
-		ft_putcharacter_length('0', length);
+		write(1, "(nil)", 5);
+		*length += 5;
 		return ;
 	}
+	write(1, "0x", 2);
+	(*length) += 2;
 	while (pointer != 0)
 	{
 		string[i] = base_character[pointer % 16];

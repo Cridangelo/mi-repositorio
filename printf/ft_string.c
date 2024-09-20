@@ -19,8 +19,8 @@ void	ft_string(char *args, int *length)
 	i = 0;
 	if (!args)
 	{
-		write(1, "(nil)", 5);
-		(*length) += 5;
+		write(1, "(null)", 6);
+		(*length) += 6;
 		return ;
 	}
 	while (args[i] != '\0')
