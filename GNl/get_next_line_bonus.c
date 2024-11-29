@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 static char	*clean_storage(char *storage)
 {
@@ -66,44 +66,68 @@ static char	*read_buffer(int fd, char *storage)
 
 char	*get_next_line(int fd)
 {
-	static char	*storage = NULL;
+	static char	*storage[SIZE_FD] = {NULL};
 	char		*line;
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
-	if (!storage || !ft_strchr(storage, '\n'))
-		storage = read_buffer(fd, storage);
-	if (!storage)
+	if (!storage[fd] || !ft_strchr(storage[fd], '\n'))
+		storage[fd] = read_buffer(fd, storage[fd]);
+	if (!storage[fd])
 		return (NULL);
-	line = new_line(storage);
+	line = new_line(storage[fd]);
 	if (!line)
-		return (free(storage), storage = NULL, NULL);
-	storage = clean_storage(storage);
+		return (free(storage[fd]), storage[fd] = NULL, NULL);
+	storage[fd] = clean_storage(storage[fd]);
 	return (line);
 }
 
-/*#include <stdio.h>
-#include <fcntl.h>
-#include "get_next_line.h"
-int main(void)
-{
-    int fd;
-    char *line;
 
-	fd = open("txt.txt", O_RDONLY);
-	if (fd == -1)
- {
-    perror("Error al abrir el archivo");
-   return (1);
- }
+// #include <stdio.h>
+// #include <fcntl.h>
+// #include "get_next_line_bonus.h"
 
-  while ((line = get_next_line(fd)) != NULL)
- {
-    printf("%s", line); 
-   free(line);        
-}
+// int main(void)
+// {
+// 	int fd1;
+// 	int fd2;
+// 	int fd3;
+// 	char *line1;
+// 	char *line2;
+// 	char *line3;
 
-  close(fd);
-return (0);
-}
-*/
+// 	fd1 = open ("txt1.txt", O_RDONLY);
+// 	if (fd1 == -1)
+// 	{
+// 		perror("Error al abrir el archivofd1");
+// 		return (1);
+// 	}
+// 	fd2 = open ("txt2.txt", O_RDONLY);
+// 	if (fd2 == -1)
+// 	{
+// 		perror("Error al abrir el archivofd2");
+// 		return (1);
+// 	}
+// 	fd3 = open ("txt3.txt", O_RDONLY);
+// 	if (fd3 == -1)
+// 	{
+// 		perror("Error al abrir el archivofd3");
+// 		return (1);
+// 	}
+// 	line1 = get_next_line(fd1);
+// 	printf("%s", line1);
+// 	free (line1);
+
+// 	line2 = get_next_line(fd2);
+// 	printf("%s", line2);
+// 	free (line2);
+
+// 	line3 = get_next_line(fd3);
+// 	printf("%s", line3);
+// 	free (line3);
+	
+// 	close(fd1);
+// 	close(fd2);
+// 	close(fd3);
+// 	return(0);
+// }
