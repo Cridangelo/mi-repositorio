@@ -8,16 +8,6 @@ typedef struct s_list
 	struct s_list	*next;
 }	t_list;
 
-t_list *ft_lstnew(void *content)
-{
-	t_list	*new_node;
-	new_node = (t_list *)malloc(sizeof(t_list)); 
-	if (!new_node)
-		return (NULL);
-	new_node->content = content;
-	new_node->next = NULL;
-	return (new_node);
-}
 void ft_lstdelone(t_list *lst, void(*del)(void *))
 {
     if(!lst || !del)
@@ -25,6 +15,17 @@ void ft_lstdelone(t_list *lst, void(*del)(void *))
     del(lst->content);
     free(lst);
 }
+
+// t_list *ft_lstnew(void *content)
+// {
+// 	t_list	*new_node;
+// 	new_node = (t_list *)malloc(sizeof(t_list)); 
+// 	if (!new_node)
+// 		return (NULL);
+// 	new_node->content = content;
+// 	new_node->next = NULL;
+// 	return (new_node);
+// }
 
 // void my_del(void *content)
 // {
