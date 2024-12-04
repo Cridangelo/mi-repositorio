@@ -11,7 +11,26 @@ typedef struct s_list
 
 t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-    
+    t_list *new_lst = NULL;
+    t_list *new_node = NULL;
+    t_list *current = NULL;
+
+    while(lst)
+    {
+        new_node = ft_lstnew(f(lst->content));
+        if (!new_node)
+        {
+            ft_lstclear(&new_lst, del);
+            return(NULL);
+        }
+        if (!new_lst)
+            new_lst = new_node;
+        else
+            current->next = new_node;
+        current = new_node;
+        lst = lst->next;
+    }
+    return (new_lst);
 }
 
 t_list *ft_lstnew(void *content)
@@ -34,10 +53,18 @@ void ft_lstiter(t_list *lst, void (*f)(void *))
     }
 }
 
-void ft_lstdelone(t_list *lst, void(*del)(void *))
+void ft_lstclear(t_list **lst, void (*del)(void *))
 {
-    if(!lst || !del)
-        return ;
-    del(lst->content);
-    free(lst);
+	t_list *temp;
+	t_list *current;
+
+	current = *lst;
+
+    while(current)
+	{
+		temp = current->next;
+		ft_lstdelone(current, del);
+		current = temp;
+	}
+	*lst = NULL;
 }
